@@ -5,20 +5,23 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap');
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: #efe7da; font-family: 'DM Sans', sans-serif; }
-.gw { background: #efe7da; border-radius: 16px; padding: 26px 30px; width: 100%; max-width: 480px; }
-.greet { font-size: 25px; color: #4a3a2a; margin-bottom: 12px; font-weight: 400; }
-.nm { color: #9c7a4f; font-weight: 500; }
-.clock { font-size: 46px; font-weight: 300; color: #3a2e22; line-height: 1; margin-bottom: 6px; font-variant-numeric: tabular-nums; }
-.ap { font-size: 16px; color: #a8957f; margin-left: 6px; }
-.date { font-size: 13px; color: #a8957f; }
+body { background: #3F1116; font-family: 'DM Sans', sans-serif; }
+.gw { background: #3F1116; border-radius: 14px; padding: 22px 28px; width: 100%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.left { display: flex; flex-direction: column; gap: 8px; }
+.greet { font-size: 22px; color: #FEEFDC; font-weight: 400; }
+.nm { color: #FFF1E9; font-weight: 500; }
+.date { font-size: 13px; color: #9D7960; font-weight: 400; }
+.clock { font-size: 44px; font-weight: 300; color: #FEEFDC; line-height: 1; font-variant-numeric: tabular-nums; }
+.ap { font-size: 16px; color: #9D7960; margin-left: 5px; }
 </style>
 </head>
 <body>
 <div class="gw">
-  <div class="greet" id="greet">Good evening, <span class="nm">ghady</span></div>
-  <div class="clock" id="clock">12:58<span class="ap">AM</span></div>
-  <div class="date" id="date">Friday, June 12</div>
+  <div class="left">
+    <div class="greet" id="greet">Good afternoon, <span class="nm">ghady</span></div>
+    <div class="date" id="date">Friday, June 12</div>
+  </div>
+  <div class="clock" id="clock">4:43<span class="ap">PM</span></div>
 </div>
 <script>
 function tick(){
