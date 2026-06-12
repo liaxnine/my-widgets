@@ -6,7 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap');
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: #3F1116; font-family: 'DM Sans', sans-serif; }
-.gw { background: #3F1116; border-radius: 14px; padding: 22px 28px; width: 100%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.wrap { background: #3F1116; border-radius: 14px; padding: 20px 28px; }
+.header { font-size: 10px; font-weight: 400; color: #FFF1E9; letter-spacing: 0.35em; text-transform: uppercase; text-align: center; margin-bottom: 18px; opacity: 0.85; }
+.gw { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 .left { display: flex; flex-direction: column; gap: 8px; }
 .greet { font-size: 22px; color: #FEEFDC; font-weight: 400; }
 .nm { color: #FFF1E9; font-weight: 500; }
@@ -16,12 +18,15 @@ body { background: #3F1116; font-family: 'DM Sans', sans-serif; }
 </style>
 </head>
 <body>
-<div class="gw">
-  <div class="left">
-    <div class="greet" id="greet">Good afternoon, <span class="nm">ghady</span></div>
-    <div class="date" id="date">Friday, June 12</div>
+<div class="wrap">
+  <div class="header">remember why you started</div>
+  <div class="gw">
+    <div class="left">
+      <div class="greet" id="greet">Good afternoon, <span class="nm">ghady</span></div>
+      <div class="date" id="date">Friday, June 12</div>
+    </div>
+    <div class="clock" id="clock">4:43<span class="ap">PM</span></div>
   </div>
-  <div class="clock" id="clock">4:43<span class="ap">PM</span></div>
 </div>
 <script>
 function tick(){
