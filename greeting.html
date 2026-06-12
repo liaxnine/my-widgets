@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: #efe7da; font-family: 'DM Sans', sans-serif; }
+.gw { background: #efe7da; border-radius: 16px; padding: 26px 30px; width: 100%; max-width: 480px; }
+.greet { font-size: 25px; color: #4a3a2a; margin-bottom: 12px; font-weight: 400; }
+.nm { color: #9c7a4f; font-weight: 500; }
+.clock { font-size: 46px; font-weight: 300; color: #3a2e22; line-height: 1; margin-bottom: 6px; font-variant-numeric: tabular-nums; }
+.ap { font-size: 16px; color: #a8957f; margin-left: 6px; }
+.date { font-size: 13px; color: #a8957f; }
+</style>
+</head>
+<body>
+<div class="gw">
+  <div class="greet" id="greet">Good evening, <span class="nm">ghady</span></div>
+  <div class="clock" id="clock">12:58<span class="ap">AM</span></div>
+  <div class="date" id="date">Friday, June 12</div>
+</div>
+<script>
+function tick(){
+  const now=new Date();
+  let h=now.getHours();
+  const m=now.getMinutes().toString().padStart(2,'0');
+  const ap=h>=12?'PM':'AM';
+  let h12=h%12; if(h12===0)h12=12;
+  document.getElementById('clock').innerHTML=h12+':'+m+'<span class="ap">'+ap+'</span>';
+  let g='Good morning';
+  if(h>=12&&h<17)g='Good afternoon';
+  else if(h>=17||h<5)g='Good evening';
+  document.getElementById('greet').innerHTML=g+', <span class="nm">ghady</span>';
+  const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  document.getElementById('date').textContent=days[now.getDay()]+', '+months[now.getMonth()]+' '+now.getDate();
+}
+tick();
+setInterval(tick,1000);
+</script>
+</body>
+</html>
